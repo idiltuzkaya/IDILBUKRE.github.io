@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Writing — Idil Bukre Tuzkaya</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .blog-page-header {
+      padding: 7rem 4rem 3rem;
+      border-bottom: 1px solid var(--line);
+    }
+    .blog-full-list { padding: 0 4rem; }
+    .blog-item { cursor: pointer; }
+
+    /* Individual post view */
+    .post-view {
+      display: none;
+      padding: 5rem 4rem 4rem;
+      max-width: 720px;
+      margin: 0 auto;
+    }
+    .post-view.active { display: block; }
+    .post-back {
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--ink3);
+      cursor: pointer;
+      display: flex; align-items: center; gap: 0.5rem;
+      margin-bottom: 3rem;
+      transition: color 0.2s;
+    }
+    .post-back:hover { color: var(--terracotta); }
+    .post-meta {
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--ink3);
+      margin-bottom: 1.5rem;
+    }
+    .post-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 400;
+      color: var(--ink);
+      line-height: 1.2;
+      margin-bottom: 2.5rem;
+    }
+    .post-body {
+      font-size: 1rem;
+      color: var(--ink2);
+      line-height: 1.9;
+    }
+    .post-body p { margin-bottom: 1.4rem; }
+    .post-body h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+      color: var(--ink);
+      margin: 2.5rem 0 1rem;
+      font-weight: 400;
+    }
+    .post-body em { font-style: italic; color: var(--terracotta); }
+
+    .add-post-note {
+      margin-top: 4rem;
+      padding: 2rem;
+      border: 1px dashed var(--line);
+      text-align: center;
+      font-size: 0.82rem;
+      color: var(--ink3);
+      line-height: 1.7;
+    }
+  </style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <a href="index.html" class="nav-logo">Idil Bükre <span>Tuzkaya</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html" data-lang="en">Home</a><a href="index.html" data-lang="tr">Ana Sayfa</a></li>
+    <li><a href="projects.html" data-lang="en">Projects</a><a href="projects.html" data-lang="tr">Projeler</a></li>
+    <li><a href="blog.html" class="active" data-lang="en">Writing</a><a href="blog.html" class="active" data-lang="tr">Yazılar</a></li>
+    <li><a href="media.html" data-lang="en">Media</a><a href="media.html" data-lang="tr">Medya</a></li>
+    <li><a href="cv.html" data-lang="en">CV</a><a href="cv.html" data-lang="tr">ÖZGEÇMİŞ</a></li>
+    <li><a href="index.html#contact" data-lang="en">Contact</a><a href="index.html#contact" data-lang="tr">İletişim</a></li>
+    <li>
+      <div class="lang-toggle">
+        <button class="lang-btn active" onclick="setLang('en')">EN</button>
+        <button class="lang-btn" onclick="setLang('tr')">TR</button>
+      </div>
+    </li>
+  </ul>
+</nav>
+
+<!-- LIST VIEW -->
+<div id="list-view">
+  <div class="blog-page-header" style="padding-top:7rem;">
+    <p class="section-label fade-up fade-up-1" data-lang="en">Essays, notes & ideas</p>
+    <p class="section-label fade-up fade-up-1" data-lang="tr">Denemeler, notlar ve fikirler</p>
+    <h1 class="section-title fade-up fade-up-2" data-lang="en" style="font-size:clamp(2.5rem,5vw,4rem);">Writing</h1>
+    <h1 class="section-title fade-up fade-up-2" data-lang="tr" style="font-size:clamp(2.5rem,5vw,4rem);">Yazılar</h1>
+  </div>
+
+  <div class="blog-full-list section" style="padding-top:2rem;">
+    <div class="blog-list">
+
+      <div class="blog-item reveal" onclick="showPost('post1')">
+        <p class="blog-date">Mar 2026</p>
+        <div>
+          <h3 class="blog-title" data-lang="en">What survivorship bias taught me about data — and life</h3>
+          <h3 class="blog-title" data-lang="tr">Hayatta kalma önyargısının bana veri hakkında öğrettikleri</h3>
+          <p class="blog-excerpt" data-lang="en">We only see what survives. The meters that failed early were gone from the records before I could study them. Here's what that means for how we think about evidence.</p>
+          <p class="blog-excerpt" data-lang="tr">Sadece hayatta kalanları görürüz. Erken arıza yapan sayaçlar, inceleyebilmeden kayıtlardan silinmişti. Bu, kanıtı nasıl düşündüğümüz hakkında ne anlama geliyor?</p>
+        </div>
+        <div class="blog-arrow">↗</div>
+      </div>
+
+      <div class="blog-item reveal" onclick="showPost('post2')">
+        <p class="blog-date">Jan 2026</p>
+        <div>
+          <h3 class="blog-title" data-lang="en">On studying statistics in a country that doesn't talk about data</h3>
+          <h3 class="blog-title" data-lang="tr">Veriden bahsetmeyen bir ülkede istatistik okumak üzerine</h3>
+          <p class="blog-excerpt" data-lang="en">A personal essay about what it means to care deeply about numbers in a place where public data is scarce and trust in institutions is complicated.</p>
+          <p class="blog-excerpt" data-lang="tr">Kamu verisinin kıt, kurumlara güvenin karmaşık olduğu bir yerde rakamlara önem vermenin ne anlama geldiğine dair kişisel bir deneme.</p>
+        </div>
+        <div class="blog-arrow">↗</div>
+      </div>
+
+      <div class="blog-item reveal" onclick="showPost('post3')">
+        <p class="blog-date">Nov 2025</p>
+        <div>
+          <h3 class="blog-title" data-lang="en">Edinburgh notes: what an internship abroad actually teaches you</h3>
+          <h3 class="blog-title" data-lang="tr">Edinburgh notları: yurt dışı stajı gerçekte ne öğretiyor?</h3>
+          <p class="blog-excerpt" data-lang="en">Three months in Scotland with a laptop, a dataset, and not much else. On loneliness, learning, and the surprisingly political nature of data visualisation.</p>
+          <p class="blog-excerpt" data-lang="tr">Bir dizüstü bilgisayar, bir veri seti ve pek fazla başka bir şeyle İskoçya'da üç ay. Yalnızlık, öğrenme ve veri görselleştirmesinin şaşırtıcı derecede politik doğası üzerine.</p>
+        </div>
+        <div class="blog-arrow">↗</div>
+      </div>
+
+    </div>
+
+    <div class="add-post-note" data-lang="en">
+      ✦ This is your writing space — add new posts by editing <code>blog.html</code> and adding a new <code>.blog-item</code> block with your content in the posts section below. Your words go here.
+    </div>
+    <div class="add-post-note" data-lang="tr">
+      ✦ Bu senin yazı alanın — yeni yazı eklemek için <code>blog.html</code> dosyasını düzenle ve aşağıdaki posts bölümüne yeni bir <code>.blog-item</code> bloğu ekle.
+    </div>
+  </div>
+</div>
+
+<!-- POST VIEWS -->
+<div class="post-view" id="post1">
+  <p class="post-back" onclick="showList()">← <span data-lang="en">Back to all posts</span><span data-lang="tr">Tüm yazılara dön</span></p>
+  <p class="post-meta">March 2026 · 5 min read</p>
+  <h1 class="post-title" data-lang="en">What survivorship bias taught me about data — and life</h1>
+  <h1 class="post-title" data-lang="tr">Hayatta kalma önyargısının bana veri hakkında öğrettikleri</h1>
+  <div class="post-body" data-lang="en">
+    <p>When I first looked at the smart meter dataset, the failure rate was 80%. Eighty percent. I remember staring at that number thinking something had gone terribly wrong with the electricity grid, or with my code.</p>
+    <p>Neither. The problem was with the data itself — or rather, with what the data <em>didn't</em> contain.</p>
+    <p>The meters that had failed early — in the first year, the first month, sometimes the first week — had been removed, replaced, and quietly erased from the operational records. What remained in the dataset was only the meters that had survived long enough to be studied. And those meters, by definition, were the healthier ones.</p>
+    <h3>The planes that came back</h3>
+    <p>There's a famous story from World War II. The statistician Abraham Wald was asked to analyze bullet holes in returning planes to figure out where to add armor. The military's instinct: reinforce the parts that had the most damage. Wald's insight: the planes that got hit in those places <em>came back</em>. The ones hit in other places didn't. Reinforce the places with no holes.</p>
+    <p>We only ever see the survivors. This is survivorship bias — and it's everywhere once you start looking for it.</p>
+    <p>After we corrected for it using Inverse Probability Weighting, the real failure rate dropped from 80% to 3%. The same meters, the same time period, the same grid — just a more honest picture of reality.</p>
+    <p>I've been thinking about this outside of statistics ever since.</p>
+    <h3>What we choose to count</h3>
+    <p>The startups we read about are the ones that succeeded. The advice we get is from people who survived their choices. The histories we learn are written by those who won. This doesn't make the lessons wrong — but it shapes them in ways we rarely acknowledge.</p>
+    <p>I don't have a tidy conclusion here. Just the habit, now, of asking: what's missing from this dataset? What didn't make it into the records?</p>
+    <p>It's a statistical question. It's also, I think, a human one.</p>
+  </div>
+  <div class="post-body" data-lang="tr">
+    <p>Akıllı sayaç veri setine ilk baktığımda, arıza oranı %80'di. Yüzde seksen. O sayıya bakıp ya elektrik şebekesiyle ya da kodumla bir şeylerin ciddi biçimde yanlış gittiğini düşündüğümü hatırlıyorum.</p>
+    <p>Hiçbiri. Sorun verinin kendisindeydi — ya da daha doğrusu, verinin <em>içermediği</em> şeydeydi.</p>
+    <p>İlk yıl, ilk ay, bazen ilk haftada arıza yapan sayaçlar çıkarılmış, değiştirilmiş ve operasyonel kayıtlardan sessizce silinmişti. Veri setinde kalan, yalnızca incelenecek kadar uzun süre hayatta kalan sayaçlardı. Ve bu sayaçlar, tanım gereği, daha sağlıklı olanlardı.</p>
+    <p>Tersine Olasılık Ağırlıklandırması kullanarak düzelttikten sonra, gerçek arıza oranı %80'den %3'e düştü. Aynı sayaçlar, aynı dönem, aynı şebeke — sadece gerçekliğin daha dürüst bir resmi.</p>
+    <p>O günden beri bunu istatistiğin dışında da düşünüyorum. Okuduğumuz girişimler başarılı olanlar. Aldığımız tavsiyeler seçimlerinden sağ kurtulanlardan. Öğrendiğimiz tarihler kazananlar tarafından yazılmış. Bu dersleri yanlış yapmaz — ama onları nadiren kabul ettiğimiz şekillerde biçimlendirir.</p>
+    <p>Şimdi şunu sormak gibi bir alışkanlığım var: Bu veri setinde ne eksik? Kayıtlara ne girmedi?</p>
+    <p>İstatistiksel bir soru. Ama aynı zamanda, bence, insani bir soru.</p>
+  </div>
+</div>
+
+<div class="post-view" id="post2">
+  <p class="post-back" onclick="showList()">← <span data-lang="en">Back to all posts</span><span data-lang="tr">Tüm yazılara dön</span></p>
+  <p class="post-meta">January 2026 · 4 min read</p>
+  <h1 class="post-title" data-lang="en">On studying statistics in a country that doesn't talk about data</h1>
+  <h1 class="post-title" data-lang="tr">Veriden bahsetmeyen bir ülkede istatistik okumak üzerine</h1>
+  <div class="post-body" data-lang="en">
+    <p>I study statistics in a country where the national statistics institute's independence has been questioned, where inflation figures have been disputed in public, and where "data" often means whichever number supports whichever argument.</p>
+    <p>This is not a political essay. I am genuinely not interested in making it one. But it does shape something about why I care about methodology so much — about bias correction, about transparent reporting, about what it means to actually measure something honestly.</p>
+    <p>When the numbers themselves are contested, the methodology becomes everything.</p>
+    <p>I came to statistics thinking it was a technical field. I still think it is. But I've also started to understand it as something closer to a moral practice — a set of commitments about honesty, about acknowledging what you don't know, about not letting the answer you want distort the question you ask.</p>
+    <p>This is why the IPW work in my smart meter project mattered to me beyond the academic result. We could have reported the 80%. It would have been technically defensible — those were the numbers in the data. But it would have been a lie of omission. The point was to find the true rate, not the convenient one.</p>
+    <p>I don't know what good public data culture looks like in practice. I do know it starts somewhere — maybe with the people who learn, early, that getting the number right matters more than getting a number that's easy.</p>
+  </div>
+  <div class="post-body" data-lang="tr">
+    <p>Ulusal istatistik kurumunun bağımsızlığının sorgulandığı, enflasyon rakamlarının kamuoyunda tartışıldığı ve "veri"nin çoğunlukla hangi argümanı desteklediğine bağlı olarak değişen rakam anlamına geldiği bir ülkede istatistik okuyorum.</p>
+    <p>Bu siyasi bir deneme değil. Onu bu hale getirmek gerçekten ilgimi çekmiyor. Ama bu durum, metodolojiye neden bu kadar önem verdiğimi şekillendiriyor — önyargı düzeltimi, şeffaf raporlama ve bir şeyi dürüstçe ölçmenin ne anlama geldiği üzerine.</p>
+    <p>Rakamların kendisi tartışmalıdır olduğunda, metodoloji her şey haline gelir.</p>
+    <p>İstatistiğe teknik bir alan olduğunu düşünerek başladım. Hâlâ öyle düşünüyorum. Ama onu aynı zamanda ahlaki bir pratiğe daha yakın bir şey olarak anlamaya başladım — dürüstlük, bilmediğini kabul etme ve istediğin cevabın sorduğun soruyu bozmasına izin vermeme konusundaki bir dizi taahhüt.</p>
+    <p>İyi bir kamu veri kültürünün pratikte nasıl göründüğünü bilmiyorum. Ama bir yerden başladığını biliyorum — belki erken dönemde doğru sayıyı bulmanın kolay bir sayıdan daha önemli olduğunu öğrenen insanlarla.</p>
+  </div>
+</div>
+
+<div class="post-view" id="post3">
+  <p class="post-back" onclick="showList()">← <span data-lang="en">Back to all posts</span><span data-lang="tr">Tüm yazılara dön</span></p>
+  <p class="post-meta">November 2025 · 6 min read</p>
+  <h1 class="post-title" data-lang="en">Edinburgh notes: what an internship abroad actually teaches you</h1>
+  <h1 class="post-title" data-lang="tr">Edinburgh notları: yurt dışı stajı gerçekte ne öğretiyor?</h1>
+  <div class="post-body" data-lang="en">
+    <p>I spent three months in Edinburgh with a university laptop, a dataset about Scottish deprivation, and a very small flat that cost more than I'd like to admit. I had expected to learn R tricks and data workflow patterns. I did. But that wasn't the main thing.</p>
+    <p>The main thing was learning to work alone, in a new city, on a problem nobody else in my life cared about, with colleagues I'd met two weeks ago.</p>
+    <p>There's a version of "international experience" that looks good on a CV and feels hollow in person. This wasn't that. The work was genuinely difficult — the spatial data was messy, the Bookdown framework had a learning curve, and my supervisor's feedback was consistently more demanding than I was used to.</p>
+    <h3>What I didn't expect to learn</h3>
+    <p>I didn't expect to learn how much data is political. A map of deprivation isn't neutral — the choice of indicators, the geographic boundaries, the color scheme all carry assumptions. Presenting findings to researchers who have spent years thinking about these places taught me to slow down and interrogate those assumptions.</p>
+    <p>I also didn't expect how much I'd enjoy the loneliness of early mornings in the library, working through a problem before anyone else arrived. There's something clarifying about being somewhere unfamiliar with only your own thinking for company.</p>
+    <p>I came back to Ankara with better code, a Bookdown site, and a slightly different sense of what I'm capable of. That last part was the whole point.</p>
+  </div>
+  <div class="post-body" data-lang="tr">
+    <p>Üç ayı Edinburgh'da bir üniversite dizüstü bilgisayarı, İskoç yoksunluğu hakkında bir veri seti ve itiraf etmek istemediğimden daha pahalıya mal olan çok küçük bir dairede geçirdim. R püf noktaları ve veri iş akışı kalıpları öğreneceğimi bekliyordum. Öğrendim. Ama asıl konu bu değildi.</p>
+    <p>Asıl konu, yeni bir şehirde yalnız çalışmayı, hayatımdaki hiç kimsenin önemsemediği bir problem üzerinde, iki hafta önce tanıştığım meslektaşlarla birlikte nasıl sürdüreceğimi öğrenmekti.</p>
+    <p>CV'de iyi görünen ama yaşanınca boş hissettiren bir "uluslararası deneyim" versiyonu var. Bu o değildi. Çalışma gerçekten zordu — mekânsal veri dağınıktı, Bookdown çerçevesinin bir öğrenme eğrisi vardı ve danışmanımın geri bildirimi alışkın olduğumdan sürekli olarak daha talepkardi.</p>
+    <p>Daha iyi kod, bir Bookdown sitesi ve neye muktedir olduğuma dair biraz farklı bir anlayışla Ankara'ya döndüm. Bu son kısım tamamen konunun özüydü.</p>
+  </div>
+</div>
+
+<footer class="footer">
+  <span class="footer-name">Idil Bükre Tuzkaya</span>
+  <span class="footer-copy">© 2026 · Ankara, Turkey</span>
+</footer>
+
+<script>
+function showPost(id) {
+  document.getElementById('list-view').style.display = 'none';
+  document.querySelectorAll('.post-view').forEach(p => p.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  window.scrollTo(0, 0);
+}
+function showList() {
+  document.getElementById('list-view').style.display = 'block';
+  document.querySelectorAll('.post-view').forEach(p => p.classList.remove('active'));
+  window.scrollTo(0, 0);
+}
+function setLang(lang) {
+  document.body.classList.toggle('tr', lang === 'tr');
+  document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.lang-btn').forEach(b => {
+    if (b.textContent === lang.toUpperCase()) b.classList.add('active');
+  });
+  localStorage.setItem('lang', lang);
+}
+window.addEventListener('DOMContentLoaded', () => {
+  const saved = localStorage.getItem('lang') || 'en';
+  setLang(saved);
+  window.addEventListener('scroll', () => {
+    document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 20);
+  });
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+});
+</script>
+</body>
+</html>

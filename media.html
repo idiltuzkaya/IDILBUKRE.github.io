@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Media — Idil Bukre Tuzkaya</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .media-section { padding: 2rem 4rem 5rem; }
+    .media-section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      font-weight: 400;
+      color: var(--ink);
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.8rem;
+      border-bottom: 1px solid var(--line);
+    }
+    .upload-note {
+      margin-top: 3rem;
+      padding: 2rem;
+      border: 1px dashed var(--line);
+      text-align: center;
+      font-size: 0.82rem;
+      color: var(--ink3);
+      line-height: 1.75;
+    }
+    .media-card { cursor: pointer; }
+    .photo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 1rem;
+    }
+    .photo-item {
+      aspect-ratio: 1;
+      background: var(--cream2);
+      border: 1px solid var(--line);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 2rem;
+      color: var(--ink3);
+      transition: border-color 0.2s;
+      overflow: hidden;
+      position: relative;
+    }
+    .photo-item:hover { border-color: var(--warm-gold); }
+    .photo-label {
+      position: absolute; bottom: 0; left: 0; right: 0;
+      background: rgba(28,26,23,0.6);
+      color: var(--cream);
+      font-size: 0.72rem;
+      padding: 0.5rem;
+      letter-spacing: 0.06em;
+      opacity: 0; transition: opacity 0.2s;
+    }
+    .photo-item:hover .photo-label { opacity: 1; }
+  </style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <a href="index.html" class="nav-logo">Idil Bükre <span>Tuzkaya</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html" data-lang="en">Home</a><a href="index.html" data-lang="tr">Ana Sayfa</a></li>
+    <li><a href="projects.html" data-lang="en">Projects</a><a href="projects.html" data-lang="tr">Projeler</a></li>
+    <li><a href="blog.html" data-lang="en">Writing</a><a href="blog.html" data-lang="tr">Yazılar</a></li>
+    <li><a href="media.html" class="active" data-lang="en">Media</a><a href="media.html" class="active" data-lang="tr">Medya</a></li>
+    <li><a href="cv.html" data-lang="en">CV</a><a href="cv.html" data-lang="tr">ÖZGEÇMİŞ</a></li>
+    <li><a href="index.html#contact" data-lang="en">Contact</a><a href="index.html#contact" data-lang="tr">İletişim</a></li>
+    <li>
+      <div class="lang-toggle">
+        <button class="lang-btn active" onclick="setLang('en')">EN</button>
+        <button class="lang-btn" onclick="setLang('tr')">TR</button>
+      </div>
+    </li>
+  </ul>
+</nav>
+
+<div style="padding-top:70px;">
+  <div class="section">
+    <div class="section-wide">
+      <p class="section-label fade-up fade-up-1" data-lang="en">Videos & photos</p>
+      <p class="section-label fade-up fade-up-1" data-lang="tr">Videolar ve fotoğraflar</p>
+      <h1 class="section-title fade-up fade-up-2" data-lang="en" style="font-size:clamp(2.5rem,5vw,4rem); margin-bottom:0.5rem;">Media</h1>
+      <h1 class="section-title fade-up fade-up-2" data-lang="tr" style="font-size:clamp(2.5rem,5vw,4rem); margin-bottom:0.5rem;">Medya</h1>
+      <p class="fade-up fade-up-3" style="font-size:0.9rem; color:var(--ink3); margin-bottom:3rem;" data-lang="en">Things I've made, recorded, or been part of.</p>
+      <p class="fade-up fade-up-3" style="font-size:0.9rem; color:var(--ink3); margin-bottom:3rem;" data-lang="tr">Yaptıklarım, kayıt ettiklerim veya dahil olduklarım.</p>
+    </div>
+  </div>
+
+  <!-- VIDEOS -->
+  <div class="media-section">
+    <div class="section-wide">
+      <h2 class="media-section-title" data-lang="en">Videos</h2>
+      <h2 class="media-section-title" data-lang="tr">Videolar</h2>
+      <div class="media-grid">
+
+        <div class="media-card reveal" onclick="window.open('https://www.youtube.com/watch?v=YOUR_VIDEO_ID', '_blank')">
+          <div class="media-thumb" style="background:var(--cream3);">
+            <div class="media-placeholder">🎬</div>
+            <div class="media-play">▶</div>
+          </div>
+          <div class="media-body">
+            <p class="media-type" data-lang="en">Promotional Film · 2024</p>
+            <p class="media-type" data-lang="tr">Tanıtım Filmi · 2024</p>
+            <p class="media-title" data-lang="en">METU Statistics Programme — co-produced with Prof. Dr. Ceylan Yozgatlıgil. 4,000+ views.</p>
+            <p class="media-title" data-lang="tr">ODTÜ İstatistik Bölümü — Prof. Dr. Ceylan Yozgatlıgil ile birlikte üretildi. 4.000+ izlenme.</p>
+          </div>
+        </div>
+
+        <!-- Placeholder for future videos -->
+        <div class="media-card reveal" style="border:1px dashed var(--line); display:flex; align-items:center; justify-content:center; min-height:200px; background:transparent;">
+          <div style="text-align:center; color:var(--ink3); font-size:0.82rem; padding:2rem; line-height:1.75;">
+            <div style="font-size:2rem; margin-bottom:0.8rem;">+</div>
+            <span data-lang="en">Add your next video here — replace this block in <code>media.html</code></span>
+            <span data-lang="tr">Bir sonraki videonuzu buraya ekle — <code>media.html</code>'de bu bloğu değiştir</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- PHOTOS -->
+  <div class="media-section" style="border-top:1px solid var(--line);">
+    <div class="section-wide">
+      <h2 class="media-section-title" data-lang="en">Photography & Moments</h2>
+      <h2 class="media-section-title" data-lang="tr">Fotoğraflar & Anlar</h2>
+      <div class="photo-grid">
+
+        <div class="photo-item reveal">
+          🏴󠁧󠁢󠁳󠁣󠁴󠁿
+          <div class="photo-label" data-lang="en">Edinburgh, 2025</div>
+          <div class="photo-label" data-lang="tr">Edinburgh, 2025</div>
+        </div>
+
+        <div class="photo-item reveal">
+          🏛️
+          <div class="photo-label" data-lang="en">METU Campus, Ankara</div>
+          <div class="photo-label" data-lang="tr">ODTÜ Kampüsü, Ankara</div>
+        </div>
+
+        <div class="photo-item reveal">
+          📊
+          <div class="photo-label" data-lang="en">AdımODTÜ Presentation, 2026</div>
+          <div class="photo-label" data-lang="tr">AdımODTÜ Sunumu, 2026</div>
+        </div>
+
+        <div class="photo-item reveal" style="border:1px dashed var(--line); background:transparent;">
+          <div style="text-align:center; color:var(--ink3); font-size:0.72rem; padding:1rem; line-height:1.7;">
+            <div style="font-size:1.5rem; margin-bottom:0.5rem;">+</div>
+            <span data-lang="en">Add a photo — replace emoji with an &lt;img&gt; tag pointing to your image file</span>
+            <span data-lang="tr">Fotoğraf ekle — emojiyi kendi resim dosyanı gösteren bir &lt;img&gt; etiketiyle değiştir</span>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="upload-note">
+        <span data-lang="en">
+          <strong>How to add your own photos & videos:</strong><br>
+          Photos: drop image files into your site folder, then replace the emoji in a <code>.photo-item</code> with <code>&lt;img src="yourphoto.jpg" style="width:100%;height:100%;object-fit:cover;"&gt;</code><br>
+          Videos: paste your YouTube/Vimeo link into the <code>onclick="window.open(...)"</code> and replace the placeholder thumbnail.
+        </span>
+        <span data-lang="tr">
+          <strong>Kendi fotoğraf ve videolarını nasıl eklersin:</strong><br>
+          Fotoğraflar: resim dosyalarını site klasörüne bırak, ardından <code>.photo-item</code> içindeki emojiyi <code>&lt;img src="resmim.jpg" style="width:100%;height:100%;object-fit:cover;"&gt;</code> ile değiştir.<br>
+          Videolar: YouTube/Vimeo linkini <code>onclick="window.open(...)"</code> kısmına yapıştır.
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <span class="footer-name">Idil Bükre Tuzkaya</span>
+  <span class="footer-copy">© 2026 · Ankara, Turkey</span>
+</footer>
+
+<script>
+function setLang(lang) {
+  document.body.classList.toggle('tr', lang === 'tr');
+  document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.lang-btn').forEach(b => {
+    if (b.textContent === lang.toUpperCase()) b.classList.add('active');
+  });
+  localStorage.setItem('lang', lang);
+}
+window.addEventListener('DOMContentLoaded', () => {
+  const saved = localStorage.getItem('lang') || 'en';
+  setLang(saved);
+  window.addEventListener('scroll', () => {
+    document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 20);
+  });
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+});
+</script>
+</body>
+</html>

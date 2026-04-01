@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Idil Bukre Tuzkaya</title>
+  <meta name="description" content="Statistics student, data scientist, and writer based in Ankara." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <a href="index.html" class="nav-logo">Idil Bükre <span>Tuzkaya</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html" class="active" data-lang="en">Home</a><a href="index.html" class="active" data-lang="tr">Ana Sayfa</a></li>
+    <li><a href="projects.html" data-lang="en">Projects</a><a href="projects.html" data-lang="tr">Projeler</a></li>
+    <li><a href="blog.html" data-lang="en">Writing</a><a href="blog.html" data-lang="tr">Yazılar</a></li>
+    <li><a href="media.html" data-lang="en">Media</a><a href="media.html" data-lang="tr">Medya</a></li>
+    <li><a href="cv.html" data-lang="en">CV</a><a href="cv.html" data-lang="tr">ÖZGEÇMİŞ</a></li>
+    <li><a href="#contact" data-lang="en">Contact</a><a href="#contact" data-lang="tr">İletişim</a></li>
+    <li>
+      <div class="lang-toggle">
+        <button class="lang-btn active" onclick="setLang('en')">EN</button>
+        <button class="lang-btn" onclick="setLang('tr')">TR</button>
+      </div>
+    </li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-left">
+    <p class="hero-eyebrow fade-up fade-up-1">
+      <span data-lang="en">Statistics · Data Science · Writing</span>
+      <span data-lang="tr">İstatistik · Veri Bilimi · Yazarlık</span>
+    </p>
+    <h1 class="hero-title fade-up fade-up-2">
+      Idil Bükre<br><em>Tuzkaya</em>
+    </h1>
+    <p class="hero-bio fade-up fade-up-3" data-lang="en">
+      Third-year Statistics student at METU, Ankara. I work with data — finding patterns, correcting biases, building models. I also write, shoot video, and try to understand how things work.
+    </p>
+    <p class="hero-bio fade-up fade-up-3" data-lang="tr">
+      ODTÜ İstatistik 3. sınıf öğrencisi, Ankara. Veriyle çalışıyorum — örüntüler buluyorum, önyargıları düzeltiyorum, modeller kuruyorum. Aynı zamanda yazıyorum, video çekiyorum ve işlerin nasıl yürüdüğünü anlamaya çalışıyorum.
+    </p>
+    <div class="hero-ctas fade-up fade-up-4">
+      <a href="projects.html" class="btn btn-terra" data-lang="en">See my work</a>
+      <a href="projects.html" class="btn btn-terra" data-lang="tr">Çalışmalarım</a>
+      <a href="#contact" class="btn btn-ghost" data-lang="en">Get in touch</a>
+      <a href="#contact" class="btn btn-ghost" data-lang="tr">İletişime geç</a>
+    </div>
+    <div class="hero-facts fade-up fade-up-4">
+      <div class="fact-item">
+        <div class="fact-num">3.4M</div>
+        <div class="fact-label" data-lang="en">Records analysed</div>
+        <div class="fact-label" data-lang="tr">Kayıt analizi</div>
+      </div>
+      <div class="fact-item">
+        <div class="fact-num">0.83</div>
+        <div class="fact-label" data-lang="en">Best AUC-ROC</div>
+        <div class="fact-label" data-lang="tr">En iyi AUC-ROC</div>
+      </div>
+      <div class="fact-item">
+        <div class="fact-num">3</div>
+        <div class="fact-label" data-lang="en">Languages</div>
+        <div class="fact-label" data-lang="tr">Dil</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-right">
+    <div class="hero-decoration"></div>
+    <p class="latest-label" data-lang="en">Latest</p>
+    <p class="latest-label" data-lang="tr">Son eklenenler</p>
+
+    <div class="latest-item">
+      <p class="latest-type" data-lang="en">Project</p>
+      <p class="latest-type" data-lang="tr">Proje</p>
+      <p class="latest-title">Smart Meter Reliability & Fault Prediction</p>
+    </div>
+    <div class="latest-item">
+      <p class="latest-type" data-lang="en">Writing</p>
+      <p class="latest-type" data-lang="tr">Yazı</p>
+      <p class="latest-title" data-lang="en">What survivorship bias taught me about data</p>
+      <p class="latest-title" data-lang="tr">Hayatta kalma önyargısının veri hakkında öğrettikleri</p>
+    </div>
+    <div class="latest-item">
+      <p class="latest-type" data-lang="en">Video</p>
+      <p class="latest-type" data-lang="tr">Video</p>
+      <p class="latest-title" data-lang="en">METU Statistics Programme — promotional film</p>
+      <p class="latest-title" data-lang="tr">ODTÜ İstatistik Bölümü — tanıtım filmi</p>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURED PROJECTS -->
+<section class="section" id="projects">
+  <div class="section-wide">
+    <div class="section-header">
+      <div>
+        <p class="section-label" data-lang="en">Selected work</p>
+        <p class="section-label" data-lang="tr">Öne çıkan projeler</p>
+        <h2 class="section-title" data-lang="en">Projects</h2>
+        <h2 class="section-title" data-lang="tr">Projeler</h2>
+      </div>
+      <a href="projects.html" class="see-all" data-lang="en">All projects</a>
+      <a href="projects.html" class="see-all" data-lang="tr">Tüm projeler</a>
+    </div>
+    <div class="projects-grid">
+
+      <div class="project-card reveal">
+        <p class="card-year">2025 – 2026</p>
+        <h3 class="card-title">Smart Meter Reliability & Fault Prediction</h3>
+        <p class="card-desc" data-lang="en">Cleaned 3.4M operational records, corrected survivorship bias with IPW (80%→3%), built a Weibull mixture model and XGBoost predictor (AUC 0.83). Presented at AdımODTÜ jury competition.</p>
+        <p class="card-desc" data-lang="tr">3,4 milyon kayıt temizlendi, IPW ile hayatta kalma önyargısı düzeltildi (80%→3%), Weibull karışım modeli ve XGBoost tahmincisi (AUC 0.83) kuruldu. AdımODTÜ jüri yarışmasında sunuldu.</p>
+        <div class="card-tags">
+          <span class="tag key">IPW</span>
+          <span class="tag key">XGBoost</span>
+          <span class="tag key">Weibull</span>
+          <span class="tag">R</span>
+          <span class="tag">Python</span>
+        </div>
+        <a href="projects.html" class="card-link">
+          <span data-lang="en">Read more</span>
+          <span data-lang="tr">Devamı</span> →
+        </a>
+      </div>
+
+      <div class="project-card reveal">
+        <p class="card-year">2025</p>
+        <h3 class="card-title" data-lang="en">Career Expectations of METU Students</h3>
+        <h3 class="card-title" data-lang="tr">ODTÜ Öğrencilerinin Kariyer Beklentileri</h3>
+        <p class="card-desc" data-lang="en">Designed a 29-question bilingual survey, collected 230 responses, ran ANOVA and regression analysis. Faculty was the only significant salary predictor.</p>
+        <p class="card-desc" data-lang="tr">29 soruluk iki dilli anket tasarlandı, 230 yanıt toplandı, ANOVA ve regresyon analizi yapıldı. Fakülte tek anlamlı maaş belirleyicisi olarak bulundu.</p>
+        <div class="card-tags">
+          <span class="tag key">ANOVA</span>
+          <span class="tag key">Regression</span>
+          <span class="tag">R</span>
+          <span class="tag">Survey design</span>
+        </div>
+        <a href="projects.html" class="card-link">
+          <span data-lang="en">Read more</span>
+          <span data-lang="tr">Devamı</span> →
+        </a>
+      </div>
+
+      <div class="project-card reveal">
+        <p class="card-year">2026</p>
+        <h3 class="card-title" data-lang="en">Adaptive Forecasting Under Structural Breaks</h3>
+        <h3 class="card-title" data-lang="tr">Yapısal Kırılmalar Altında Adaptif Tahmin</h3>
+        <p class="card-desc" data-lang="en">Comparing rolling, expanding, and fixed window strategies across ARIMA, ETS, Prophet, and Theta methods on GDP, COVID-19, and oil price datasets.</p>
+        <p class="card-desc" data-lang="tr">GSYİH, COVID-19 ve petrol fiyatı veri setlerinde ARIMA, ETS, Prophet ve Theta yöntemleri ile kayan, genişleyen ve sabit pencere stratejileri karşılaştırılıyor.</p>
+        <div class="card-tags">
+          <span class="tag key">ARIMA</span>
+          <span class="tag key">Prophet</span>
+          <span class="tag">ETS</span>
+          <span class="tag">Theta</span>
+          <span class="tag">R</span>
+        </div>
+        <a href="projects.html" class="card-link">
+          <span data-lang="en">Read more</span>
+          <span data-lang="tr">Devamı</span> →
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- WRITING PREVIEW -->
+<section class="section" style="background: var(--cream2);">
+  <div class="section-wide">
+    <div class="section-header">
+      <div>
+        <p class="section-label" data-lang="en">Thoughts & essays</p>
+        <p class="section-label" data-lang="tr">Düşünceler & denemeler</p>
+        <h2 class="section-title" data-lang="en">Writing</h2>
+        <h2 class="section-title" data-lang="tr">Yazılar</h2>
+      </div>
+      <a href="blog.html" class="see-all" data-lang="en">All posts</a>
+      <a href="blog.html" class="see-all" data-lang="tr">Tüm yazılar</a>
+    </div>
+    <div class="blog-list">
+      <div class="blog-item reveal">
+        <p class="blog-date">Mar 2026</p>
+        <div>
+          <h3 class="blog-title" data-lang="en">What survivorship bias taught me about data — and life</h3>
+          <h3 class="blog-title" data-lang="tr">Hayatta kalma önyargısının bana veri hakkında öğrettikleri</h3>
+          <p class="blog-excerpt" data-lang="en">We only see what survives. The meters that failed early were gone from the records before I could study them. Here's what that means for how we think about evidence.</p>
+          <p class="blog-excerpt" data-lang="tr">Sadece hayatta kalanları görürüz. Erken arıza yapan sayaçlar, inceleyebilmeden kayıtlardan silinmişti. Bu, kanıtı nasıl düşündüğümüz hakkında ne anlama geliyor?</p>
+        </div>
+        <div class="blog-arrow">↗</div>
+      </div>
+      <div class="blog-item reveal">
+        <p class="blog-date">Jan 2026</p>
+        <div>
+          <h3 class="blog-title" data-lang="en">On studying statistics in a country that doesn't talk about data</h3>
+          <h3 class="blog-title" data-lang="tr">Veriden bahsetmeyen bir ülkede istatistik okumak üzerine</h3>
+          <p class="blog-excerpt" data-lang="en">A personal essay about what it means to care deeply about numbers in a place where public data is scarce and trust in institutions is complicated.</p>
+          <p class="blog-excerpt" data-lang="tr">Kamu verisinin kıt, kurumlara güvenin karmaşık olduğu bir yerde rakamlara önem vermenin ne anlama geldiğine dair kişisel bir deneme.</p>
+        </div>
+        <div class="blog-arrow">↗</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section" id="contact">
+  <div class="section-wide">
+    <div class="contact-grid">
+      <div class="contact-intro reveal">
+        <h2 data-lang="en">Let's talk.<br><em style="font-family:'Playfair Display',serif;font-style:italic;color:var(--terracotta)">I'd love to hear from you.</em></h2>
+        <h2 data-lang="tr">Konuşalım.<br><em style="font-family:'Playfair Display',serif;font-style:italic;color:var(--terracotta)">Mesaj atmaktan çekinme.</em></h2>
+        <br>
+        <p data-lang="en">Whether it's about a project, an internship opportunity, a collaboration, or just because you found something interesting here — my inbox is open.</p>
+        <p data-lang="tr">Bir proje, staj fırsatı, işbirliği ya da sadece burada ilginç bir şey bulduğun için olsun — mesaj kutum açık.</p>
+      </div>
+      <div class="contact-links reveal">
+        <div class="contact-link-item">
+          <span class="contact-link-label">Email</span>
+          <a href="mailto:tuzkayaidil@gmail.com" class="contact-link-val">tuzkayaidil@gmail.com</a>
+        </div>
+        <div class="contact-link-item">
+          <span class="contact-link-label">LinkedIn</span>
+          <a href="https://linkedin.com/in/idil-bukre-tuzkaya" target="_blank" class="contact-link-val">idil-bukre-tuzkaya</a>
+        </div>
+        <div class="contact-link-item">
+          <span class="contact-link-label"><span data-lang="en">Phone</span><span data-lang="tr">Telefon</span></span>
+          <a href="tel:+905422890852" class="contact-link-val">+90 542 289 0852</a>
+        </div>
+        <div class="contact-link-item">
+          <span class="contact-link-label"><span data-lang="en">Based in</span><span data-lang="tr">Konum</span></span>
+          <span class="contact-link-val">Ankara, Turkey</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <span class="footer-name">Idil Bükre Tuzkaya</span>
+  <span class="footer-copy">© 2026 · Ankara, Turkey</span>
+</footer>
+
+<script>
+function setLang(lang) {
+  document.body.classList.toggle('tr', lang === 'tr');
+  document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.lang-btn').forEach(b => {
+    if (b.textContent === lang.toUpperCase()) b.classList.add('active');
+  });
+  localStorage.setItem('lang', lang);
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+  const saved = localStorage.getItem('lang') || 'en';
+  setLang(saved);
+
+  window.addEventListener('scroll', () => {
+    document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 20);
+  });
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+});
+</script>
+</body>
+</html>

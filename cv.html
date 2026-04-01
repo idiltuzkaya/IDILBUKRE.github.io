@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CV — Idil Bukre Tuzkaya</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <a href="index.html" class="nav-logo">Idil Bükre <span>Tuzkaya</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html" data-lang="en">Home</a><a href="index.html" data-lang="tr">Ana Sayfa</a></li>
+    <li><a href="projects.html" data-lang="en">Projects</a><a href="projects.html" data-lang="tr">Projeler</a></li>
+    <li><a href="blog.html" data-lang="en">Writing</a><a href="blog.html" data-lang="tr">Yazılar</a></li>
+    <li><a href="media.html" data-lang="en">Media</a><a href="media.html" data-lang="tr">Medya</a></li>
+    <li><a href="cv.html" class="active" data-lang="en">CV</a><a href="cv.html" class="active" data-lang="tr">ÖZGEÇMİŞ</a></li>
+    <li><a href="index.html#contact" data-lang="en">Contact</a><a href="index.html#contact" data-lang="tr">İletişim</a></li>
+    <li>
+      <div class="lang-toggle">
+        <button class="lang-btn active" onclick="setLang('en')">EN</button>
+        <button class="lang-btn" onclick="setLang('tr')">TR</button>
+      </div>
+    </li>
+  </ul>
+</nav>
+
+<div style="padding-top:70px;">
+  <div class="section">
+    <div style="max-width: 860px; margin: 0 auto;">
+
+      <div style="display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:3rem; flex-wrap:wrap; gap:1rem;" class="fade-up fade-up-1">
+        <div>
+          <p class="section-label" data-lang="en">Curriculum Vitae</p>
+          <p class="section-label" data-lang="tr">Özgeçmiş</p>
+          <h1 class="section-title" style="font-size:clamp(2rem,4vw,3.2rem);">Idil Bükre Tuzkaya</h1>
+        </div>
+        <a href="cv.pdf" class="btn btn-terra" download data-lang="en">Download PDF</a>
+        <a href="cv.pdf" class="btn btn-terra" download data-lang="tr">PDF İndir</a>
+      </div>
+
+      <div style="display:flex; gap:2rem; flex-wrap:wrap; margin-bottom:3rem; font-size:0.85rem; color:var(--ink3);" class="fade-up fade-up-2">
+        <span>tuzkayaidil@gmail.com</span>
+        <span>+90 542 289 0852</span>
+        <span>Ankara, Turkey</span>
+        <a href="https://linkedin.com/in/idil-bukre-tuzkaya" target="_blank" style="color:var(--terracotta);">LinkedIn</a>
+      </div>
+
+      <!-- EDUCATION -->
+      <div class="cv-section reveal">
+        <h2 class="cv-section-title" data-lang="en">Education</h2>
+        <h2 class="cv-section-title" data-lang="tr">Eğitim</h2>
+        <div class="cv-item">
+          <div class="cv-meta">
+            Sep 2022 – Jun 2027<br>Ankara, Turkey
+          </div>
+          <div>
+            <h3 class="cv-role" data-lang="en">B.S. in Statistics</h3>
+            <h3 class="cv-role" data-lang="tr">İstatistik Lisans</h3>
+            <p class="cv-org">Middle East Technical University (METU / ODTÜ)</p>
+            <p class="cv-desc" data-lang="en">CGPA: 2.89 / 4.00 · Relevant coursework: Linear Models, Sampling & Surveying, Statistical Computing, Mathematical Statistics, Probability</p>
+            <p class="cv-desc" data-lang="tr">GPA: 2.89 / 4.00 · İlgili dersler: Doğrusal Modeller, Örnekleme ve Araştırma Teknikleri, İstatistiksel Hesaplama, Matematiksel İstatistik, Olasılık</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- EXPERIENCE -->
+      <div class="cv-section reveal">
+        <h2 class="cv-section-title" data-lang="en">Experience</h2>
+        <h2 class="cv-section-title" data-lang="tr">Deneyim</h2>
+        <div class="cv-item">
+          <div class="cv-meta">
+            Jul – Sep 2025<br>Edinburgh, UK
+          </div>
+          <div>
+            <h3 class="cv-role" data-lang="en">Data Visualisation Intern</h3>
+            <h3 class="cv-role" data-lang="tr">Veri Görselleştirme Stajyeri</h3>
+            <p class="cv-org">University of Edinburgh, School of Mathematics</p>
+            <p class="cv-desc" data-lang="en">Investigated Scotland-specific socioeconomic datasets across 5+ deprivation, health, and air quality indicators. Built reproducible data workflows using R, Spark, and Arrow. Developed interactive visualisations and a Bookdown report framework for presenting regional deprivation findings.</p>
+            <p class="cv-desc" data-lang="tr">5+ yoksunluk, sağlık ve hava kalitesi göstergesi üzerinden İskoçya'ya özgü sosyoekonomik veri setleri incelendi. R, Spark ve Arrow kullanılarak yeniden üretilebilir veri iş akışları oluşturuldu. Bookdown rapor çerçevesi geliştirildi.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROJECTS -->
+      <div class="cv-section reveal">
+        <h2 class="cv-section-title" data-lang="en">Research & Projects</h2>
+        <h2 class="cv-section-title" data-lang="tr">Araştırma ve Projeler</h2>
+
+        <div class="cv-item">
+          <div class="cv-meta">2025 – 2026</div>
+          <div>
+            <h3 class="cv-role">Smart Meter Reliability & Fault Prediction</h3>
+            <p class="cv-org" data-lang="en">STAT 499 Research · Supervised by Prof. Dr. Ayşen Akkaya</p>
+            <p class="cv-org" data-lang="tr">STAT 499 Araştırma · Danışman: Prof. Dr. Ayşen Akkaya</p>
+            <p class="cv-desc" data-lang="en">Cleaned 3.4M records, corrected survivorship bias (IPW), built Weibull mixture model + XGBoost (AUC 0.83). Presented at AdımODTÜ jury competition (March 2026).</p>
+            <p class="cv-desc" data-lang="tr">3,4 milyon kayıt temizlendi, IPW ile önyargı düzeltildi, Weibull karışım modeli + XGBoost (AUC 0,83) kuruldu. AdımODTÜ jüri yarışmasında sunuldu (Mart 2026).</p>
+          </div>
+        </div>
+
+        <div class="cv-item">
+          <div class="cv-meta">2026</div>
+          <div>
+            <h3 class="cv-role" data-lang="en">Adaptive Univariate Forecasting Under Structural Breaks</h3>
+            <h3 class="cv-role" data-lang="tr">Yapısal Kırılmalar Altında Adaptif Tek Değişkenli Tahmin</h3>
+            <p class="cv-org" data-lang="en">AdımODTÜ Grant Application</p>
+            <p class="cv-org" data-lang="tr">AdımODTÜ Hibe Başvurusu</p>
+            <p class="cv-desc" data-lang="en">Comparing rolling/expanding/fixed window strategies across ARIMA, ETS, Prophet, Theta, and forecast combination on GDP, COVID-19, and oil price datasets.</p>
+            <p class="cv-desc" data-lang="tr">GSYİH, COVID-19 ve petrol fiyatı veri setlerinde ARIMA, ETS, Prophet, Theta ve tahmin kombinasyonu yöntemleri karşılaştırılıyor.</p>
+          </div>
+        </div>
+
+        <div class="cv-item">
+          <div class="cv-meta">2025</div>
+          <div>
+            <h3 class="cv-role" data-lang="en">Career Expectations of METU Students</h3>
+            <h3 class="cv-role" data-lang="tr">ODTÜ Öğrencilerinin Kariyer Beklentileri</h3>
+            <p class="cv-desc" data-lang="en">29-question bilingual survey, 230 responses. ANOVA, regression, Kruskal-Wallis tests. Faculty (Engineering) only significant salary predictor.</p>
+            <p class="cv-desc" data-lang="tr">29 soruluk iki dilli anket, 230 yanıt. ANOVA, regresyon, Kruskal-Wallis testleri. Fakülte (Mühendislik) tek anlamlı maaş belirleyicisi.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- SKILLS -->
+      <div class="cv-section reveal">
+        <h2 class="cv-section-title" data-lang="en">Skills</h2>
+        <h2 class="cv-section-title" data-lang="tr">Beceriler</h2>
+        <div class="cv-item" style="border:none; padding-top:0;">
+          <div class="cv-meta" data-lang="en">Programming</div>
+          <div class="cv-meta" data-lang="tr">Programlama</div>
+          <div>
+            <div class="skills-row">
+              <span class="skill-pill highlight">R</span>
+              <span class="skill-pill highlight">Python</span>
+              <span class="skill-pill highlight">SQL</span>
+              <span class="skill-pill highlight">Apache Spark</span>
+              <span class="skill-pill">Arrow</span>
+            </div>
+          </div>
+        </div>
+        <div class="cv-item" style="border:none; padding-top:0.5rem;">
+          <div class="cv-meta" data-lang="en">Visualisation</div>
+          <div class="cv-meta" data-lang="tr">Görselleştirme</div>
+          <div>
+            <div class="skills-row">
+              <span class="skill-pill highlight">Tableau</span>
+              <span class="skill-pill highlight">Flourish</span>
+              <span class="skill-pill">R Shiny</span>
+              <span class="skill-pill">ggplot2</span>
+              <span class="skill-pill">Bookdown</span>
+              <span class="skill-pill">Figma</span>
+            </div>
+          </div>
+        </div>
+        <div class="cv-item" style="border:none; padding-top:0.5rem;">
+          <div class="cv-meta" data-lang="en">Languages</div>
+          <div class="cv-meta" data-lang="tr">Diller</div>
+          <div>
+            <div class="skills-row">
+              <span class="skill-pill highlight">Turkish (C2)</span>
+              <span class="skill-pill highlight">English (C1)</span>
+              <span class="skill-pill">Spanish (B1)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- EXTRACURRICULAR -->
+      <div class="cv-section reveal">
+        <h2 class="cv-section-title" data-lang="en">Extracurricular</h2>
+        <h2 class="cv-section-title" data-lang="tr">Ekstra Faaliyetler</h2>
+        <div class="cv-item">
+          <div class="cv-meta">2022 – 2024</div>
+          <div>
+            <h3 class="cv-role" data-lang="en">Board Member, METU Statistics Club</h3>
+            <h3 class="cv-role" data-lang="tr">Yönetim Kurulu Üyesi, ODTÜ İstatistik Kulübü</h3>
+            <p class="cv-desc" data-lang="en">Contributed to planning and execution of Datas'peak and Datathon events over 2 years.</p>
+            <p class="cv-desc" data-lang="tr">2 yıl boyunca Datas'peak ve Datathon etkinliklerinin planlanması ve yürütülmesine katkıda bulunuldu.</p>
+          </div>
+        </div>
+        <div class="cv-item">
+          <div class="cv-meta">2024</div>
+          <div>
+            <h3 class="cv-role" data-lang="en">METU Statistics Promotional Video</h3>
+            <h3 class="cv-role" data-lang="tr">ODTÜ İstatistik Tanıtım Videosu</h3>
+            <p class="cv-desc" data-lang="en">Co-produced with Prof. Dr. Ceylan Yozgatlıgil. Surpassed 4,000 views; programme's nationwide placement ranking improved 42% during this period.</p>
+            <p class="cv-desc" data-lang="tr">Prof. Dr. Ceylan Yozgatlıgil ile birlikte üretildi. 4.000'den fazla izlenme; bu dönemde bölümün ülke geneli yerleşim sıralaması %42 iyileşti.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- CERTS -->
+      <div class="cv-section reveal">
+        <h2 class="cv-section-title" data-lang="en">Certifications</h2>
+        <h2 class="cv-section-title" data-lang="tr">Sertifikalar</h2>
+        <div class="cv-item">
+          <div class="cv-meta">Nov 2024</div>
+          <div>
+            <h3 class="cv-role" data-lang="en">Intermediate R Certificate</h3>
+            <h3 class="cv-role" data-lang="tr">Orta Düzey R Sertifikası</h3>
+          </div>
+        </div>
+        <div class="cv-item">
+          <div class="cv-meta">Jan 2024</div>
+          <div>
+            <h3 class="cv-role" data-lang="en">Data Visualisation with Seaborn Certificate</h3>
+            <h3 class="cv-role" data-lang="tr">Seaborn ile Veri Görselleştirme Sertifikası</h3>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <span class="footer-name">Idil Bükre Tuzkaya</span>
+  <span class="footer-copy">© 2026 · Ankara, Turkey</span>
+</footer>
+
+<script>
+function setLang(lang) {
+  document.body.classList.toggle('tr', lang === 'tr');
+  document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.lang-btn').forEach(b => {
+    if (b.textContent === lang.toUpperCase()) b.classList.add('active');
+  });
+  localStorage.setItem('lang', lang);
+}
+window.addEventListener('DOMContentLoaded', () => {
+  const saved = localStorage.getItem('lang') || 'en';
+  setLang(saved);
+  window.addEventListener('scroll', () => {
+    document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 20);
+  });
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+});
+</script>
+</body>
+</html>

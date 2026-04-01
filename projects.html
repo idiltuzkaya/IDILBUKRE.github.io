@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects — Idil Bukre Tuzkaya</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <a href="index.html" class="nav-logo">Idil Bükre <span>Tuzkaya</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html" data-lang="en">Home</a><a href="index.html" data-lang="tr">Ana Sayfa</a></li>
+    <li><a href="projects.html" class="active" data-lang="en">Projects</a><a href="projects.html" class="active" data-lang="tr">Projeler</a></li>
+    <li><a href="blog.html" data-lang="en">Writing</a><a href="blog.html" data-lang="tr">Yazılar</a></li>
+    <li><a href="media.html" data-lang="en">Media</a><a href="media.html" data-lang="tr">Medya</a></li>
+    <li><a href="cv.html" data-lang="en">CV</a><a href="cv.html" data-lang="tr">ÖZGEÇMİŞ</a></li>
+    <li><a href="index.html#contact" data-lang="en">Contact</a><a href="index.html#contact" data-lang="tr">İletişim</a></li>
+    <li>
+      <div class="lang-toggle">
+        <button class="lang-btn active" onclick="setLang('en')">EN</button>
+        <button class="lang-btn" onclick="setLang('tr')">TR</button>
+      </div>
+    </li>
+  </ul>
+</nav>
+
+<div style="padding-top:70px;">
+  <div class="section">
+    <div class="section-wide">
+      <div style="margin-bottom:3rem;">
+        <p class="section-label fade-up fade-up-1" data-lang="en">All work</p>
+        <p class="section-label fade-up fade-up-1" data-lang="tr">Tüm projeler</p>
+        <h1 class="section-title fade-up fade-up-2" data-lang="en" style="font-size:clamp(2.5rem,5vw,4rem);">Projects</h1>
+        <h1 class="section-title fade-up fade-up-2" data-lang="tr" style="font-size:clamp(2.5rem,5vw,4rem);">Projeler</h1>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- PROJECT 1 -->
+        <div class="project-card reveal">
+          <p class="card-year">2025 – 2026 · STAT 499 Research</p>
+          <h3 class="card-title">Smart Meter Reliability & Fault Prediction</h3>
+          <p class="card-desc" data-lang="en">
+            Integrated and cleaned 3 operational tables (~3.4M records) from a Turkish electricity distribution company. Engineered lifetime and binary fault label variables across ~400K meters within a 0–9 year analysis window.<br><br>
+            Core contribution: corrected severe survivorship bias using Inverse Probability Weighting (IPW) and population-aligned stratified resampling, reducing apparent failure rates from 80% to the true 3% — improving AUC-ROC across all models by 7–14 percentage points.<br><br>
+            Built a 3-component Weibull mixture model (pseudo-R² = 75.5%) and Kaplan–Meier survival curves. Combined with XGBoost (AUC = 0.83), enabling targeting of the top 20% riskiest meters to prevent ~61% of early-life failures.<br><br>
+            Presented at AdımODTÜ jury competition (March 2026). Supervised by Prof. Dr. Ayşen Akkaya.
+          </p>
+          <p class="card-desc" data-lang="tr">
+            Bir Türk elektrik dağıtım şirketinden 3 operasyonel tablo (~3,4 milyon kayıt) entegre edildi ve temizlendi. ~400K sayaç için 0–9 yıllık analiz penceresinde ömür ve ikili arıza etiketi değişkenleri oluşturuldu.<br><br>
+            Ana katkı: Ters Olasılık Ağırlıklandırması (IPW) ve nüfus hizalı tabakalı yeniden örnekleme kullanılarak hayatta kalma önyargısı düzeltildi; görünen hata oranı %80'den gerçek %3'e indirildi.<br><br>
+            3 bileşenli Weibull karışım modeli (sözde-R² = %75,5) ve Kaplan–Meier eğrileri oluşturuldu. XGBoost ile birleştirildi (AUC = 0,83). AdımODTÜ jüri yarışmasında sunuldu (Mart 2026).
+          </p>
+          <div class="card-tags">
+            <span class="tag key">IPW · Bias correction</span>
+            <span class="tag key">XGBoost</span>
+            <span class="tag key">Weibull mixture</span>
+            <span class="tag">Kaplan-Meier</span>
+            <span class="tag">R</span>
+            <span class="tag">Python</span>
+            <span class="tag">Survival analysis</span>
+          </div>
+        </div>
+
+        <!-- PROJECT 2 -->
+        <div class="project-card reveal">
+          <p class="card-year">2026 · AdımODTÜ Grant Application</p>
+          <h3 class="card-title" data-lang="en">Adaptive Univariate Forecasting Under Structural Breaks</h3>
+          <h3 class="card-title" data-lang="tr">Yapısal Kırılmalar Altında Adaptif Tek Değişkenli Tahmin</h3>
+          <p class="card-desc" data-lang="en">
+            Comparing rolling, expanding, and fixed window strategies across ARIMA, ETS, Prophet, forecast combination, and Theta methods. Applied to GDP, COVID-19, and oil price datasets to understand how window choice interacts with structural breaks.<br><br>
+            Submitted as AdımODTÜ grant application (February 2026). TÜBİTAK application under consideration as fallback.
+          </p>
+          <p class="card-desc" data-lang="tr">
+            GSYİH, COVID-19 ve petrol fiyatı veri setlerinde ARIMA, ETS, Prophet ve Theta yöntemleri ile kayan, genişleyen ve sabit pencere stratejileri karşılaştırılıyor.<br><br>
+            AdımODTÜ hibe başvurusu olarak gönderildi (Şubat 2026). TÜBİTAK başvurusu yedek seçenek olarak değerlendiriliyor.
+          </p>
+          <div class="card-tags">
+            <span class="tag key">ARIMA</span>
+            <span class="tag key">Prophet</span>
+            <span class="tag">ETS</span>
+            <span class="tag">Theta</span>
+            <span class="tag">Forecast combination</span>
+            <span class="tag">R</span>
+            <span class="tag">Time series</span>
+          </div>
+        </div>
+
+        <!-- PROJECT 3 -->
+        <div class="project-card reveal">
+          <p class="card-year">2025 · Statistical Computing Course</p>
+          <h3 class="card-title" data-lang="en">Career Expectations & Work Preferences of METU Students</h3>
+          <h3 class="card-title" data-lang="tr">ODTÜ Öğrencilerinin Kariyer Beklentileri ve Çalışma Tercihleri</h3>
+          <p class="card-desc" data-lang="en">
+            Designed and administered a 29-question bilingual survey collecting 230 responses across METU faculties. Applied Cochran's formula for sample size determination with convenience and snowball sampling.<br><br>
+            Ran one-way ANOVA, multiple linear regression, Kruskal–Wallis tests, and one-sample t-tests. Faculty (Engineering) was the only significant salary predictor (β = 0.595, p &lt; 0.001). GPA and gender showed no effect.<br><br>
+            Key finding: work–life balance ranked #1 career priority (avg. rank 2.50); openness to working abroad was the strongest attitudinal response (μ = 4.45/5, p &lt; 0.001).
+          </p>
+          <p class="card-desc" data-lang="tr">
+            ODTÜ fakültelerinden 230 yanıt toplayan 29 soruluk iki dilli anket tasarlandı ve uygulandı. Örneklem büyüklüğü için Cochran formülü kullanıldı.<br><br>
+            Tek yönlü ANOVA, çoklu regresyon, Kruskal–Wallis testleri yapıldı. Fakülte (Mühendislik) tek anlamlı maaş belirleyicisi olarak bulundu (β = 0,595, p &lt; 0,001). GPA ve cinsiyet etkisiz çıktı.
+          </p>
+          <div class="card-tags">
+            <span class="tag key">ANOVA</span>
+            <span class="tag key">Regression</span>
+            <span class="tag">Kruskal-Wallis</span>
+            <span class="tag">Survey design</span>
+            <span class="tag">R</span>
+            <span class="tag">ggplot2</span>
+          </div>
+        </div>
+
+        <!-- PROJECT 4 — Edinburgh -->
+        <div class="project-card reveal">
+          <p class="card-year">2025 · University of Edinburgh Internship</p>
+          <h3 class="card-title" data-lang="en">Scotland Deprivation & Regional Data Visualisation</h3>
+          <h3 class="card-title" data-lang="tr">İskoçya Yoksunluk & Bölgesel Veri Görselleştirmesi</h3>
+          <p class="card-desc" data-lang="en">
+            Investigated Scotland-specific socioeconomic datasets focusing on multiple deprivation, health, air quality, and fringe indicator datasets against 5+ indicators.<br><br>
+            Built reproducible data workflows integrating large spatial and non-spatial sources using R, Spark, and Arrow. Developed interactive visualisations and a Bookdown report framework for presenting regional deprivation findings.
+          </p>
+          <p class="card-desc" data-lang="tr">
+            İskoçya'ya özgü sosyoekonomik veri setleri; çoklu yoksunluk, sağlık, hava kalitesi ve sınır göstergeleri üzerinden 5+ göstergeyle incelendi.<br><br>
+            R, Spark ve Arrow kullanılarak büyük mekânsal ve mekânsal olmayan kaynakları entegre eden yeniden üretilebilir iş akışları oluşturuldu. Bookdown rapor çerçevesi geliştirildi.
+          </p>
+          <div class="card-tags">
+            <span class="tag key">R · Spark · Arrow</span>
+            <span class="tag key">Spatial data</span>
+            <span class="tag">Bookdown</span>
+            <span class="tag">Data visualisation</span>
+            <span class="tag">Flourish</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <span class="footer-name">Idil Bükre Tuzkaya</span>
+  <span class="footer-copy">© 2026 · Ankara, Turkey</span>
+</footer>
+
+<script>
+function setLang(lang) {
+  document.body.classList.toggle('tr', lang === 'tr');
+  document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.lang-btn').forEach(b => {
+    if (b.textContent === lang.toUpperCase()) b.classList.add('active');
+  });
+  localStorage.setItem('lang', lang);
+}
+window.addEventListener('DOMContentLoaded', () => {
+  const saved = localStorage.getItem('lang') || 'en';
+  setLang(saved);
+  window.addEventListener('scroll', () => {
+    document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 20);
+  });
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+});
+</script>
+</body>
+</html>
